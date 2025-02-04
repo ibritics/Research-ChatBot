@@ -10,7 +10,7 @@ import faiss
 import os
 
 # Set OpenAI API Key
-os.environ['OPENAI_API_KEY'] = 'your-key'
+
 
 # Function to create config.toml dynamically
 def create_streamlit_config():
@@ -43,6 +43,8 @@ create_streamlit_config()
 def main():
     st.header('🌿 AI agent for Doctoral Students: Chat with Academic Papers 💬')
     st.sidebar.title('📚 LLM ChatApp using LangChain & OpenAI')
+    key = st.text_input("Insert your OpenAI key (This app is deployed on Streamlit, ready privacy conditions before sharing your personal Key)")
+    os.environ['OPENAI_API_KEY'] = key
     st.sidebar.markdown('''
     🚀 To connect with me: 
     - 🟢 [Linkedin](https://www.linkedin.com/in/ibritics/)
