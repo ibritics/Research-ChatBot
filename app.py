@@ -10,8 +10,7 @@ import faiss
 import os
 
 # Set OpenAI API Key
-os.environ['OPENAI_API_KEY'] = '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'
-
+os.environ['OPENAI_API_KEY'] = 'your-key'
 
 # Function to create config.toml dynamically
 def create_streamlit_config():
